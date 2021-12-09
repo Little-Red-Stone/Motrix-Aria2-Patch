@@ -76,7 +76,7 @@ python3 /Users/???/Desktop/Patch.py
 这两句话后，点按回车退出并运行接下来的代码
 
 ```sh
-python3 /Users/xzh/aria2/Patch.py
+python3 /Users/???/aria2/Patch.py
 ```
 
 好了，按照它的要求一步步地继续就好了！
