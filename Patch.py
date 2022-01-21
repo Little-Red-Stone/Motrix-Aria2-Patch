@@ -94,6 +94,9 @@ def main_download_aria2():
         check = input("点击回车以退出")
         flag = 1
     else:
+        if find_file("/Users/" + usrName+"/aria2", "Patch.py", "file"):
+            flag=0
+            return
         print("发现Aria2源码，是否一键操作（删除并下载最新）")
         op = input("[Y/n] ")
         if op == "Y" or op == "y":
