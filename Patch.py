@@ -160,10 +160,7 @@ def main_build_aria2():
     os.system('''export PATH="/usr/local/opt/gettext/bin:$PATH"''')
     print("完成")
     print("编译...")
-    os.system("cd "+usrDir+"/aria2")
-    os.system("autoreconf -i")
-    os.system('''ARIA2_STATIC=yes CXXFLAGS="-O2 -std=c++14" ./configure''')
-    os.system("make")
+    os.system('''cd '''+usrDir+'''/aria2 && autoreconf -i && ARIA2_STATIC=yes CXXFLAGS="-O2 -std=c++14" ./configure && make''')
     print("完成")
     print("请按回车继续...")
     check = input()
@@ -176,7 +173,7 @@ def main_change_aria2():
     if op == "Y" or op == "y":
         print("正在替换...")
         os.system("rm -rf /Applications/Motrix.app/Contents/Resources/engine/aria2c")
-        os.system("cp -R "+usrDir+"/aria2/src/aria2c /Applications/Motrix.app/Contents/Resources/engine")
+        os.system("cp -R "+usrDir+"/aria2/src/aria2c /Applications/Motrix.app/Contents/Resources/engine/")
         print("完毕!")
     elif op == "n" or op == "N":
         print("请手动替换")
